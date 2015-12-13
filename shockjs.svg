@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="350" xmlns="http://www.w3.org/2000/svg" height="350">
+ <g id="layer1" externalResourcesRequired="false">
+  <g id="g7195" externalResourcesRequired="false">
+   <g stroke="#000" fill-rule="evenodd">
+    <g fill="#ffe4e1">
+     <g id="g7137" transform="matrix(1.1513 0 0 1.1513 -59.963 25.12)">
+      <path id="path7118" stroke-width="4" d="m116.34 121.61a19.509 30.398 0 1 1 -39.018 10.089 19.509 30.398 0 1 1 39.018 -10.089z"/>
+      <path id="path7135" stroke-width="2" d="m107.88 123.8a11.043 17.207 0 1 1 -22.087 5.7112 11.043 17.207 0 1 1 22.087 -5.7112z"/>
+     </g>
+     <g id="g7141" transform="matrix(-1.1513 0 0 1.1513 759.96 25.12)">
+      <path id="path7143" stroke-width="4" d="m420.35 121.61a19.509 30.398 0 1 1 -39.018 10.089 19.509 30.398 0 1 1 39.018 -10.089z"/>
+      <path id="path7145" stroke-width="2" d="m411.89 123.8a11.043 17.207 0 1 1 -22.087 5.7112 11.043 17.207 0 1 1 22.087 -5.7112z"/>
+     </g>
+     <path id="path5906" stroke-width="4" d="m290.53 187.12a116 87.942 0 1 1 -231.99 0 116 87.942 0 1 1 231.99 0z"/>
+    </g>
+    <g id="g6813" transform="matrix(1.4718 0 0 -1.4718 -444.33 1355.3)">
+     <path id="path6815" stroke-width="3" fill="#fff" d="m369.4 755.31h102.16v11.247s-26.946 18.745-52.486 18.745-49.674-18.745-49.674-18.745v-11.247z"/>
+     <g fill="none">
+      <path id="path6817" d="m414.39 755.31v29.055"/>
+      <path id="path6819" d="m428.45 756.25v27.18"/>
+      <path id="path6821" d="m440.64 756.25v24.368"/>
+      <path id="path6823" d="m452.82 756.25v18.745"/>
+      <path id="path6825" d="m464.07 755.31v14.996"/>
+      <path id="path6827" d="m400.33 755.31v25.306"/>
+      <path id="path6829" d="m388.15 756.25v21.557"/>
+      <path id="path6831" d="m378.78 756.25v15.933"/>
+     </g>
+    </g>
+    <g stroke-width="3" fill="#fff">
+     <path id="path6833" d="m174.6 131.01a55.637 55.637 0 1 1 -111.27 0 55.637 55.637 0 1 1 111.27 0z"/>
+     <path id="path7097" d="m285.74 131.01a55.637 55.637 0 1 1 -111.27 0 55.637 55.637 0 1 1 111.27 0z"/>
+    </g>
+    <path id="path7122" stroke-width="4.605" fill="none" d="m162.01 174.8s6.7899 13.188 13.319 13.319c6.5287 0.13055 12.796-12.796 12.796-12.796"/>
+   </g>
+  </g>
+ </g>
+ <g stroke-width="5" stroke="#000">
+  <ellipse id="svg_1" cy="113" cx="105" rx="17" ry="16"/>
+  <ellipse id="svg_2" cy="142" cx="251" rx="17" ry="16"/>
+ </g>
+</svg>
