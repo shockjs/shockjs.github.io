@@ -1,0 +1,26 @@
+{
+  "name": "shockjs.github.io",
+  "version": "1.0.0",
+  "description": "Generator for github pages.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shockjs/shockjs.github.io.git"
+  },
+  "keywords": [
+    "shockjs",
+    "documentation"
+  ],
+  "author": "Damian Dennis <damiandennis@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shockjs/shockjs.github.io/issues"
+  },
+  "homepage": "https://github.com/shockjs/shockjs.github.io#readme",
+  "dependencies": {
+    "prismjs": "^1.4.1"
+  }
+}

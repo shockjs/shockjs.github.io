@@ -8,13 +8,15 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="./node_modules/prismjs/themes/prism.css" />
+    <script type="text/javascript" src="node_modules/prismjs/prism.js"></script>
   </head>
   <body>
     <section class="page-header">
       <img src="shockjs.svg" />
       <h1 class="project-name">ShockJS</h1>
       <h2 class="project-tagline">The documentation for how to use shockJS.</h2>
-      <h3>Still in alpha stage and many features not complete, Do not use in production.</h3>
+      <h3>Still in alpha stage and many features not complete. Do not use in production.</h3>
     </section>
 
     <section class="main-content">
@@ -48,8 +50,112 @@
         </ul>
       </p>
 
-      <footer class="site-footer">
+      <h3>Installation</h3>
+      <p>
+        This will eventually be done using slush but for now you will need to clone this repo.
+        <pre><code class="language-bash">git clone https://github.com/shockjs/shockjs.github.io.git</code></pre>
+      </p>
+      <p>
+        Install dependencies:
+      <pre><code class="language-bash">npm install</code></pre>
+      </p>
+      <p>
+        You will need gulp if you dont already have it to get started:
+        <pre><code class="language-bash">npm install -g gulp</code></pre>
+      </p>
+      <p>
+        Just type gulp to build the project and start the pm2 server:
+        <pre><code class="language-bash">gulp</code></pre>
+      </p>
 
+      <h3>Structure</h3>
+      <p>
+        ShockJS is broken up into three sections.
+        <ul>
+          <li>
+            <strong>src/server: </strong> server only code
+            <ul>
+              <li>
+                <strong>api: </strong> api endpoints go here and will extends off the base class RestApi.
+                They will also need to be included in the api.js
+              </li>
+              <li>
+                <strong>classes: </strong> currently storing reusable classes however will likely be pushed out into separate modules.
+              </li>
+              <li>
+                <strong>config: </strong> this is the configuration for the website.
+                To get started only development.json and main.json needs to be configured with database details.
+                Also to override main.json for the local environment include a main-local.json.
+              </li>
+              <li>
+                <strong>graphql: </strong> this is in early development however the main purpose is to work with the rest api to pull back only data needed.
+              </li>
+              <li>
+                <strong>models:</strong> ORM models for bookshelf.js, they are combined with the shared model of the same name so that validation etc can be shared.
+              </li>
+              <li>
+                <strong>templates: </strong> These are jade templates and are mainly used for the structure outside of the react body. Also email templates are stored here.
+              </li>
+              <li>
+                <strong>utils: </strong> General utilities, usually a single function per file that have a single purpose.
+              </li>
+              <li>
+                <strong>server.js: </strong> This is what starts the Hapi server.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>src/client:</strong> client only code
+            <ul>
+              <li>
+                <strong>components: </strong> ReactJS components that are not rendered server-side.
+              </li>
+              <li>
+                <strong>models: </strong> basically just classes that inherit from shared models for validation etc.
+              </li>
+              <li>
+                <strong>scss: </strong> Sass files for styling.
+              </li>
+              <li>
+                <strong>static: </strong> Files that exposed over http. Most files will be generated to here in the dist folder.
+              </li>
+              <li>
+                <strong>client.js: </strong> Begins the client-side routing.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>src/shared: </strong> code shared between client and server
+            <ul>
+              <li>
+                <strong>blocks: </strong> Also known as <a href="https://github.com/erikras/ducks-modular-redux">ducks</a>,
+                they combine action types/actions/reducer into single module.
+                I have renamed ducks to blocks as blocks made more sense to me. Blocks make a complete store.
+              </li>
+              <li>
+                <strong>classes: </strong> Reusable classes, these will be most likely moved to separate modules.
+              </li>
+              <li>
+                <strong>components: </strong> ReactJS components that are rendered on both client and server.
+              </li>
+              <li>
+                <strong>constants: </strong> Mostly shared action names are stored here but can be used for other constants.
+              </li>
+              <li>
+                <strong>models: </strong> The shared models for server and client. Mostly shared validation goes here.
+              </li>
+              <li>
+                <strong>store: </strong> The configuration for the redux store.
+              </li>
+              <li>
+                <strong>utils: </strong> General utilities, usually a single function per file that have a single purpose.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        You should try and put most of your code in the shared section however there are always exceptions.
+      </p>
+      <footer class="site-footer">
         <span class="site-footer-credits">Theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
 
