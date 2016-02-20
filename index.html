@@ -52,8 +52,11 @@
 
       <h3>Installation</h3>
       <p>
-        This will eventually be done using slush but for now you will need to clone this repo.
+        This will eventually be done using slush but for now you will need to clone this repo:
         <pre><code class="language-bash">git clone https://github.com/shockjs/shockjs.github.io.git</code></pre>
+      </p>
+      <p>
+        Configure your database settings: <pre><code class="language-bash">src/server/config/development.json</code></pre>
       </p>
       <p>
         Install dependencies:
@@ -64,16 +67,27 @@
         <pre><code class="language-bash">npm install -g gulp</code></pre>
       </p>
       <p>
+        Run migrations:
+        <pre><code class="language-bash">gulp migrate</code></pre>
+        This will create a migrations table, user and auth tables.
+      </p>
+      <p>
+        Create a super user:
+        <pre><code class="language-bash">gulp user --create</code></pre>
+      </p>
+      <p>
         Just type gulp to build the project and start the pm2 server:
         <pre><code class="language-bash">gulp</code></pre>
       </p>
-
+      <p>
+        Access the server at <code class="language-bash">http://localhost:8000/</code>
+      </p>
       <h3>Structure</h3>
       <p>
         ShockJS is broken up into three sections.
         <ul>
           <li>
-            <strong>src/server: </strong> server only code
+            <strong>src/server: </strong> server only code, any changes made here will only convert to ES5 and restart the pm2 server.
             <ul>
               <li>
                 <strong>api: </strong> api endpoints go here and will extends off the base class RestApi.
@@ -105,7 +119,7 @@
             </ul>
           </li>
           <li>
-            <strong>src/client:</strong> client only code
+            <strong>src/client:</strong> client only code, any changes made here will convert to ES5, bundle using webpack and restart the pm2 server.
             <ul>
               <li>
                 <strong>components: </strong> ReactJS components that are not rendered server-side.
@@ -125,7 +139,7 @@
             </ul>
           </li>
           <li>
-            <strong>src/shared: </strong> code shared between client and server
+            <strong>src/shared: </strong> code shared between client and server, any changes made here will convert to ES5, bundle using webpack and restart the pm2 server.
             <ul>
               <li>
                 <strong>blocks: </strong> Also known as <a href="https://github.com/erikras/ducks-modular-redux">ducks</a>,
@@ -154,6 +168,18 @@
           </li>
         </ul>
         You should try and put most of your code in the shared section however there are always exceptions.
+      </p>
+      <h3>File Naming</h3>
+      <p>
+        Javascript does not really have a standard around this however lowercase/full-stops seems to be commonly used
+        and this is what will be used in the this project. Also files will be appended by their intended use:
+        <ul>
+          <li><strong>component: </strong> ReactJS components</li>
+          <li><strong>block: </strong> bundled action types, actions and reducer</li>
+          <li><strong>model: </strong> ORM or form models</li>
+          <li><strong>api: </strong> Api classes that extend from the RestApi class</li>
+          <li><strong>type: </strong> GraphQL type</li>
+        </ul>
       </p>
       <footer class="site-footer">
         <span class="site-footer-credits">Theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
