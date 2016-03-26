@@ -142,15 +142,13 @@
             <strong>src/shared: </strong> code shared between client and server, any changes made here will convert to ES5, bundle using webpack and restart the pm2 server.
             <ul>
               <li>
-                <strong>blocks: </strong> Also known as <a href="https://github.com/erikras/ducks-modular-redux">ducks</a>,
-                they combine action types/actions/reducer into single module.
-                I have renamed ducks to blocks as blocks made more sense to me. Blocks make a complete store.
-              </li>
-              <li>
                 <strong>classes: </strong> Reusable classes, these will be most likely moved to separate modules.
               </li>
               <li>
                 <strong>components: </strong> ReactJS components that are rendered on both client and server.
+                Also contains blocks which are also known as <a href="https://github.com/erikras/ducks-modular-redux">ducks</a>,
+                they combine action types/actions/reducer into single module.
+                I have renamed ducks to blocks as blocks made more sense to me. Blocks make a complete store.
               </li>
               <li>
                 <strong>constants: </strong> Mostly shared action names are stored here but can be used for other constants.
